@@ -17,3 +17,6 @@ actividades.push(2);
 actividades.push(false);
 var actividades2 = ["Futbol", "Baloncesto"]; //Asi le digo que es un array de string
 actividades2.push("Tenis");
+//ANY (Usar poco, siempre que podamos tipar nuestras variables)
+var item;
+item = 'Hola';
