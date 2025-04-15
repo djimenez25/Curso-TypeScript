@@ -44,3 +44,21 @@ const person : Person = {
 const personTwo : Person  = {
     name: 'Doe',
 };
+
+//INTERFACE
+interface Persona{
+    name: String;
+    age?: number;
+    sayHello():void;
+};
+
+const persona : Persona = {
+    name: 'Jane',
+    age: 30,
+    sayHello: function(){}
+};
+
+const personaTwo : Persona  = {
+    name: 'Doe',
+    sayHello: function(){}
+};

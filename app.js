@@ -30,3 +30,13 @@ var person = {
 var personTwo = {
     name: 'Doe',
 };
+;
+var persona = {
+    name: 'Jane',
+    age: 30,
+    sayHello: function () { }
+};
+var personaTwo = {
+    name: 'Doe',
+    sayHello: function () { }
+};
