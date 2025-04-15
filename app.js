@@ -40,3 +40,7 @@ var personaTwo = {
     name: 'Doe',
     sayHello: function () { }
 };
+//RECORDS
+var myObject = {};
+myObject.name = 'Pepe';
+myObject.age = 22;

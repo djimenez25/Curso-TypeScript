@@ -62,3 +62,11 @@ const personaTwo : Persona  = {
     name: 'Doe',
     sayHello: function(){}
 };
+
+//RECORDS
+const myObject: Record<any, any> = {}
+
+myObject.name = 'Pepe';
+myObject.age = 22;
+
+//UNION
