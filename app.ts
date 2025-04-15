@@ -98,3 +98,18 @@ type Personas = PersonName | PersonAge | PersonSayHello;
 const Personas: Personas = {
     name: 'Jonh',
 };
+
+//FUNCIONES
+//Parametros obligatorios
+function add(a: number, b: number): number{
+    return a + b;
+}
+
+const result = add(1,2);
+
+//Parametros opcionales
+function add1(a: number, b: number = 1): number{ //Si no le pasas nada b por defecto es 1
+    return a + b;
+}
+
+const result1 = add1(1);

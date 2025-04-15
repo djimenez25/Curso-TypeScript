@@ -54,3 +54,15 @@ var Persons = {
 var Personas = {
     name: 'Jonh',
 };
+//FUNCIONES
+//Parametros obligatorios
+function add(a, b) {
+    return a + b;
+}
+var result = add(1, 2);
+//Parametros opcionales
+function add1(a, b) {
+    if (b === void 0) { b = 1; }
+    return a + b;
+}
+var result1 = add1(1);
