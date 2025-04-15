@@ -66,3 +66,27 @@ function add1(a, b) {
     return a + b;
 }
 var result1 = add1(1);
+//ASIGNAR TIPO A UNA FUNCION
+var combineValues;
+function add2(a, b) {
+    return a + b;
+}
+function sayHello() {
+    console.log('Hola');
+}
+var user = 'Bob';
+if (user === 'Pep') {
+    combineValues = add2;
+}
+else {
+    combineValues = sayHello;
+}
+combineValues(1, 2);
+//NEVER
+function generateError(message) {
+    if (message === 'hola') {
+        return true;
+    }
+    throw new Error(message);
+}
+generateError('Opsss!!. Ha ocurrido un error');

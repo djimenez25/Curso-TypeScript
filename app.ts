@@ -113,3 +113,34 @@ function add1(a: number, b: number = 1): number{ //Si no le pasas nada b por def
 }
 
 const result1 = add1(1);
+
+//ASIGNAR TIPO A UNA FUNCION
+let combineValues: Function;
+
+function add2(a:number, b: number): number{
+    return a + b;
+}
+
+function sayHello(){
+    console.log('Hola');
+}
+
+let user = 'Bob';
+
+if(user === 'Pep'){
+    combineValues = add2;
+}else{
+    combineValues = sayHello
+}
+
+combineValues(1,2);
+
+//NEVER
+function generateError(message: string): never | boolean{
+    if(message === 'hola'){
+        return true;
+    }
+    throw new Error(message);
+}
+
+generateError('Opsss!!. Ha ocurrido un error');
