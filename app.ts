@@ -136,11 +136,119 @@ if(user === 'Pep'){
 combineValues(1,2);
 
 //NEVER
-function generateError(message: string): never | boolean{
-    if(message === 'hola'){
-        return true;
+// function generateError(message: string): never | boolean{
+//     if(message === 'hola'){
+//         return true;
+//     }
+//     throw new Error(message);
+// }
+
+// generateError('Opsss!!. Ha ocurrido un error');
+
+//CLASES Y HERENCIA
+class Person3{
+    private gender: string;
+    constructor(gender: string){
+        this.gender = gender;
     }
-    throw new Error(message);
+
+    public sayHello(){
+        console.log('Hello');
+    }
+
+    setGender(gender: string){
+        this.gender = gender;
+    }
+
+    getGender(){
+        return this.gender;
+    }
 }
 
-generateError('Opsss!!. Ha ocurrido un error');
+const person3 = new Person3('male');
+
+//MODIFICADORES DE ACCESO
+person3.setGender('female');
+person3.sayHello();
+
+console.log(person3.getGender());
+
+//PROPIEDADES ESTATICAS Y READONLY
+class Person4{
+    protected gender: string;
+
+    public readonly activities: string[]; //Solo de tipo lectura, no podre modificarlo
+
+    static age = 20;
+
+    constructor(gender: string){
+        this.gender = gender;
+        this.activities = ['Sports']
+    }
+
+    public sayHello(){
+        console.log('Hello');
+    }
+
+    setGender(gender: string){
+        this.gender = gender;
+    }
+
+    getGender(){
+        return this.gender;
+    }
+}
+
+const person4 = new Person4('male');
+console.log(Person4.age);
+console.log(person4.activities);
+
+//HERENCIA
+class Person5{
+    public gender: string;
+
+    constructor(gender: string){
+        this.gender = gender;
+    }
+
+    sayHello() {
+        console.log(`Soy ${this.gender}`);
+    }
+}
+
+class Developer extends Person5 {   }
+
+const person5 = new Person5('male');
+const dev = new Developer('female');
+
+console.log(person5.gender, dev.gender);
+console.log(person5.sayHello(), dev.sayHello());
+
+//INTERFACES
+interface IPerson6{
+    gender: string;
+    sayHi: () => void;
+}
+
+interface IPerson6SayHello{
+    sayHello: () => void;
+}
+
+class Person6 implements IPerson6, IPerson6SayHello{
+    public gender: string;
+
+    constructor(gender: string){
+        this.gender = gender;
+    }
+
+    sayHi() : void{
+        console.log('Hola');
+    }
+
+    sayHello () {
+        console.log('Nuevo hola');
+    }
+}
+
+const person6 = new Person6('male');
+
