@@ -20,3 +20,13 @@ actividades2.push("Tenis");
 //ANY (Usar poco, siempre que podamos tipar nuestras variables)
 var item;
 item = 'Hola';
+//TUPLAS
+var arr = [1, 2];
+var arr2 = [1, 'Admin'];
+var person = {
+    name: 'Jane',
+    age: 30,
+};
+var personTwo = {
+    name: 'Doe',
+};

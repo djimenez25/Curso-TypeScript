@@ -25,3 +25,22 @@ actividades2.push("Tenis");
 //ANY (Usar poco, siempre que podamos tipar nuestras variables)
 var item: any;
 item = 'Hola';
+
+//TUPLAS
+var arr : [number, number] = [1,2];
+var arr2 : [number, String] = [1,'Admin'];
+
+//PROPIOS TIPOS
+type Person = {
+    name: String;
+    age?: number; //OPCIONAL
+};
+
+const person : Person = {
+    name: 'Jane',
+    age: 30,
+};
+
+const personTwo : Person  = {
+    name: 'Doe',
+};
