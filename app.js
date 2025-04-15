@@ -44,3 +44,13 @@ var personaTwo = {
 var myObject = {};
 myObject.name = 'Pepe';
 myObject.age = 22;
+var Persons = {
+    name: 'Jonh',
+    age: 23,
+    sayHello: function () {
+        console.log('Hola');
+    }
+};
+var Personas = {
+    name: 'Jonh',
+};

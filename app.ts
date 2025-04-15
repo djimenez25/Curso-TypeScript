@@ -70,3 +70,31 @@ myObject.name = 'Pepe';
 myObject.age = 22;
 
 //UNION
+type PersonName = {
+    name: string;
+};
+
+type PersonAge = {
+    age: number;
+};
+
+type PersonSayHello = {
+    sayHello: () => void;
+}
+
+type Persons = PersonName & PersonAge & PersonSayHello;
+
+const Persons: Persons = {
+    name: 'Jonh',
+    age: 23,
+    sayHello: function(){
+        console.log('Hola');
+    }
+};
+
+//OR
+type Personas = PersonName | PersonAge | PersonSayHello;
+
+const Personas: Personas = {
+    name: 'Jonh',
+};
